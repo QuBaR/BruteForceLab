@@ -1,0 +1,6 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/BruteForceLab.Attacker/BruteForceLab.Attacker.csproj" />
+    <Project Path="src/BruteForceLab.Web/BruteForceLab.Web.csproj" />
+  </Folder>
+</Solution>
