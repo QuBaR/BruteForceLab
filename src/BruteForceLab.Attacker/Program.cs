@@ -12,7 +12,10 @@ using System.Net.Http.Json;
 const string basAdress = "http://localhost:5080";
 const string anvandarnamn = "offer";
 
-var ordlista = await File.ReadAllLinesAsync("wordlist.txt");
+// Läs ordlistan relativt appens egen katalog, inte arbetskatalogen, så att den
+// hittas även när du kör "dotnet run --project ..." från repo-roten.
+var ordlistaSökväg = Path.Combine(AppContext.BaseDirectory, "wordlist.txt");
+var ordlista = await File.ReadAllLinesAsync(ordlistaSökväg);
 using var http = new HttpClient { BaseAddress = new Uri(basAdress) };
 
 Console.WriteLine($"Startar attack mot {basAdress}/login som användare '{anvandarnamn}'.");
