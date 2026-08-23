@@ -1,6 +1,8 @@
 using BruteForceLab.Web.Data;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.RateLimiting;
 using Microsoft.EntityFrameworkCore;
+using System.Threading.RateLimiting;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -31,6 +33,7 @@ builder.Services
 
 // TODO steg 4: aktivera rate limiting här (AddRateLimiter med en fixed window).
 // builder.Services.AddRateLimiter(options => { ... });
+// Usings för rate limiting ligger redan högst upp i filen.
 
 var app = builder.Build();
 
