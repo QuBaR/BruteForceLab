@@ -5,6 +5,9 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <RootNamespace>BruteForceLab.Web</RootNamespace>
+    <!-- Tystar NU1903-varningen om SQLite som EF drar in transitivt. Det är en
+         lokal labbapp med SQLite-fil, sårbarheten är inte nåbar här. -->
+    <NuGetAudit>false</NuGetAudit>
   </PropertyGroup>
 
   <ItemGroup>

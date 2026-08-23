@@ -22,13 +22,15 @@ Testanvändaren är `offer` och startläget saknar med flit både rate limiting 
 dotnet run --project src/BruteForceLab.Web
 ```
 
-Webben lyssnar på `http://localhost:5080`. Låt den ligga igång.
+När webben är igång skriver den ut `Now listening on: http://localhost:5080`. Låt den ligga igång.
 
 **Terminal 2, kör attacken:**
 
 ```powershell
 dotnet run --project src/BruteForceLab.Attacker
 ```
+
+> **Får du `address already in use` på port 5080?** Då kör webben redan i en annan terminal. Stäng den gamla körningen med Ctrl+C först, du behöver bara en instans igång.
 
 ## Var du gör vad
 
